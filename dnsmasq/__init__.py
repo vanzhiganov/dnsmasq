@@ -1,32 +1,9 @@
-__author__ = 'vanzhiganov'
-
-"""
-import dnsmasq
-dnsmasq.Dnsmasq().exists_name('test')
-dnsmasq.Dnsmasq().add('test', '10.10.10.10')
-dnsmasq.Dnsmasq().delete('test')
-
-"""
-
-
+# coding: utf-8
 import shutil
 import subprocess
+from exceptions inport *
 
-
-class NameAlreadyExists(Exception):
-    pass
-
-
-class NameNotExists(Exception):
-    pass
-
-
-class IPAlreadyExists(Exception):
-    pass
-
-
-class IPNotExists(Exception):
-    pass
+__author__ = 'vanzhiganov'
 
 
 class Dnsmasq:
