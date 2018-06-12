@@ -2,7 +2,8 @@
 
 import shutil
 import subprocess
-from exceptions inport *
+import validators
+from .exceptions inport *
 
 __author__ = 'vanzhiganov'
 
@@ -14,6 +15,7 @@ class Dnsmasq(object):
         :param dnsmasq_conf:
         :return:
         """
+        self.lease_time = '12h'
         self.dnsmasq_conf = dnsmasq_conf
         self.list = self.__read_conf()
 
@@ -84,5 +86,5 @@ class Dnsmasq(object):
         f = open("/tmp/dnsmasq.conf", 'w')
         f.writelines(self.list)
         f.close()
-        shutil.copyfile("/tmp/dnsmasq.conf", "/etc/lxc/dnsmasq.conf")
+        shutil.copyfile("/tmp/dnsmasq.conf", self.dnsmasq_conf)
         return None

@@ -6,10 +6,11 @@ Python dnsmasq library
 
 ```
 import dnsmasq
+dns = dnsmasq.Dnsmasq("/etc/dnsmasq.d/cloud.conf")
 ```
 
 ```
-dnsmasq.Dnsmasq().exists_name('test')
-dnsmasq.Dnsmasq().add('test', '10.10.10.10')
-dnsmasq.Dnsmasq().delete('test')
+dns.exists_name('test')
+dns.add('test', '10.10.10.10')
+dns.delete('test')
 ```

@@ -7,5 +7,8 @@ setup(
     author_email='vanzhiganov@ya.ru',
     packages=[
         "dnsmasq"
+    ],
+    install_requires=[
+        "validators"
     ]
 )
