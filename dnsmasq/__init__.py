@@ -7,7 +7,7 @@ from exceptions inport *
 __author__ = 'vanzhiganov'
 
 
-class Dnsmasq:
+class Dnsmasq(object):
     def __init__(self, dnsmasq_conf='/etc/lxc/dnsmasq.conf'):
         """
 
@@ -85,13 +85,4 @@ class Dnsmasq:
         f.writelines(self.list)
         f.close()
         shutil.copyfile("/tmp/dnsmasq.conf", "/etc/lxc/dnsmasq.conf")
-        return None
-
-
-class Service:
-    def restart(self):
-        subprocess.call("service dnsmasq restart", shell=True)
-        return True
-
-    def pid(self):
         return None
