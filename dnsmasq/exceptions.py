@@ -1,3 +1,4 @@
+
 class NameAlreadyExists(Exception):
     pass
 
@@ -11,4 +12,8 @@ class IPAlreadyExists(Exception):
 
 
 class IPNotExists(Exception):
+    pass
+
+
+class ConfigSyntaxException(Exception):
     pass
